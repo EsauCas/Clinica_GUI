@@ -1,0 +1,120 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Paso 1: Especialidad - Clínica Comunitaria">
+    <nav
+        aria-label="Progreso"
+        class="flex justify-between items-center mb-10 relative max-w-3xl mx-auto"
+    >
+        <div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -z-10 -translate-y-1/2"></div>
+        <div class="flex flex-col items-center z-10">
+            <div class="w-10 h-10 rounded-full bg-teal-700 text-white flex items-center justify-center font-bold text-lg">
+                1
+            </div>
+            <span class="font-bold text-slate-900 mt-2 text-sm">
+                Especialidad
+            </span>
+        </div>
+        <div class="flex flex-col items-center z-10">
+            <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-400 border-2 border-slate-200 flex items-center justify-center font-bold text-lg">
+                2
+            </div>
+            <span class="font-medium text-slate-400 mt-2 text-sm">Médico</span>
+        </div>
+        <div class="flex flex-col items-center z-10">
+            <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-400 border-2 border-slate-200 flex items-center justify-center font-bold text-lg">
+                3
+            </div>
+            <span class="font-medium text-slate-400 mt-2 text-sm">Horario</span>
+        </div>
+        <div class="flex flex-col items-center z-10">
+            <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-400 border-2 border-slate-200 flex items-center justify-center font-bold text-lg">
+                4
+            </div>
+            <span class="font-medium text-slate-400 mt-2 text-sm">
+                Confirmar
+            </span>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto">
+        <h1 class="text-2xl font-bold text-slate-900 mb-6">
+            Paso 1: ¿Qué tipo de atención necesitas?
+        </h1>
+
+        <form>
+            <section class="grid sm:grid-cols-2 gap-4 mb-8">
+                <article class="bg-teal-50 border-2 border-teal-700 p-4 rounded-xl cursor-pointer flex items-center gap-4">
+                    <div class="bg-teal-700 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">
+                        M
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900">
+                            Medicina General
+                        </h3>
+                        <span class="text-sm text-slate-600">
+                            Atención primaria
+                        </span>
+                    </div>
+                </article>
+                <article class="bg-white border border-slate-200 p-4 rounded-xl hover:border-teal-700 cursor-pointer flex items-center gap-4 transition">
+                    <div class="bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">
+                        C
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900">Cardiología</h3>
+                        <span class="text-sm text-slate-500">
+                            Evaluación cardíaca
+                        </span>
+                    </div>
+                </article>
+                <!-- Más tarjetas de especialidades -->
+            </section>
+
+            <fieldset class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 mb-8">
+                <legend class="text-lg font-bold text-slate-900 mb-4">
+                    Modalidad de atención
+                </legend>
+                <div class="flex gap-6">
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                            type="radio"
+                            name="tipo"
+                            checked
+                            class="text-teal-700 focus:ring-teal-700 w-5 h-5"
+                        />
+                        <span class="font-medium text-slate-900">
+                            Presencial
+                        </span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input
+                            type="radio"
+                            name="tipo"
+                            class="text-teal-700 focus:ring-teal-700 w-5 h-5"
+                        />
+                        <span class="font-medium text-slate-900">
+                            Telemedicina
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="flex justify-between items-center pt-4 border-t border-slate-200">
+                <button
+                    type="button"
+                    class="text-slate-500 font-medium hover:text-slate-800"
+                >
+                    Cancelar
+                </button>
+                <a
+                    href="/agendar/confirmacion"
+                    class="bg-teal-700 text-white px-8 py-3 rounded-lg font-medium hover:bg-teal-800 transition"
+                >
+                    Siguiente: Elegir médico >
+                </a>
+            </div>
+        </form>
+    </main>
+</Layout>

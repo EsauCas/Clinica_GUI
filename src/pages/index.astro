@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Inicio - Clínica Comunitaria">
+    <section class="grid md:grid-cols-2 gap-8 items-center bg-teal-50 p-8 rounded-2xl shadow-sm mb-12">
+        <div>
+            <span class="text-teal-700 font-bold tracking-wide uppercase text-sm">
+                Citas en línea - 24/7
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-4 leading-tight">
+                Agenda tu cita médica en línea
+            </h1>
+            <p class="text-lg font-light text-slate-600 mb-6">
+                Elige especialidad, médico y horario en pocos pasos y recibe tu
+                recordatorio por SMS.
+            </p>
+            <a
+                href="/agendar/especialidad"
+                class="inline-block bg-teal-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-800 transition"
+            >
+                Agendar cita ahora >
+            </a>
+        </div>
+        <div class="bg-teal-700/20 rounded-xl h-64 flex items-center justify-center text-teal-800 font-medium">
+            (Imagen simulada)
+        </div>
+    </section>
+
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-slate-900 text-center mb-8">
+            Nuestras especialidades
+        </h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <article class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4">
+                <div class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">
+                    C
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Cardiología</h3>
+                    <span class="text-sm text-slate-500">3 médicos</span>
+                </div>
+            </article>
+            <article class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4">
+                <div class="bg-teal-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">
+                    O
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Odontología</h3>
+                    <span class="text-sm text-slate-500">8 médicos</span>
+                </div>
+            </article>
+            <!-- Clona el article para rellenar la grilla -->
+        </div>
+    </section>
+</Layout>

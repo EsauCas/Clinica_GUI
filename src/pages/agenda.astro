@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Agenda - Médico">
+    <div class="grid md:grid-cols-4 gap-6">
+        <aside class="md:col-span-1 space-y-4">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center">
+                <div class="bg-teal-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                    CG
+                </div>
+                <h2 class="font-bold text-slate-900">Dr. Carlos García</h2>
+                <p class="text-sm text-slate-500">Medicina General</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col">
+                <a
+                    href="#"
+                    class="p-4 bg-teal-50 text-teal-800 font-bold border-l-4 border-teal-700"
+                >
+                    Agenda del día
+                </a>
+                <a href="#" class="p-4 text-slate-600 hover:bg-slate-50">
+                    Mis pacientes
+                </a>
+            </div>
+        </aside>
+
+        <main class="md:col-span-3">
+            <header class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-slate-900">
+                    Miércoles, 7 de octubre de 2026
+                </h1>
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button class="px-4 py-2 text-sm font-medium text-white bg-slate-900 border border-slate-900 rounded-l-lg">
+                        Día
+                    </button>
+                    <button class="px-4 py-2 text-sm font-medium text-slate-900 bg-white border border-slate-200 rounded-r-lg hover:bg-slate-50">
+                        Semana
+                    </button>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 border-l-4 border-l-teal-700">
+                    <h2 class="text-sm text-slate-500 font-medium">
+                        Total de citas
+                    </h2>
+                    <span class="text-3xl font-bold text-slate-900 block mt-1">
+                        8
+                    </span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 border-l-4 border-l-orange-500">
+                    <h2 class="text-sm text-slate-500 font-medium">
+                        Pendientes
+                    </h2>
+                    <span class="text-3xl font-bold text-orange-600 block mt-1">
+                        6
+                    </span>
+                </div>
+            </div>
+
+            <section class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-900 font-bold uppercase text-xs">
+                        <tr>
+                            <th class="px-6 py-4">Hora</th>
+                            <th class="px-6 py-4">Paciente</th>
+                            <th class="px-6 py-4">Motivo</th>
+                            <th class="px-6 py-4">Estado</th>
+                            <th class="px-6 py-4 text-right">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-6 py-4 font-bold text-slate-900">
+                                09:00
+                            </td>
+                            <td class="px-6 py-4">Carmen Gallegos M.</td>
+                            <td class="px-6 py-4 truncate max-w-[150px]">
+                                Consulta primera vez
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="bg-slate-200 text-slate-800 px-2 py-1 rounded text-xs font-bold">
+                                    En curso
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-right">
+                                <button class="bg-teal-700 text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-teal-800">
+                                    Atender
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-6 py-4 font-bold text-slate-900">
+                                09:45
+                            </td>
+                            <td class="px-6 py-4">Jorge Morales P.</td>
+                            <td class="px-6 py-4 truncate max-w-[150px]">
+                                Dolor abdominal
+                            </td>
+                            <td class="px-6 py-4">
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-bold">
+                                    Pendiente
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-right">
+                                <button class="border border-teal-700 text-teal-700 px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-teal-50">
+                                    Ver
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</Layout>

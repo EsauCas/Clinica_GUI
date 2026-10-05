@@ -1,0 +1,73 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Mi Panel - Paciente">
+    <div class="grid md:grid-cols-4 gap-6">
+        <aside class="md:col-span-1">
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col">
+                <a
+                    href="#"
+                    class="p-4 bg-teal-50 text-teal-800 font-bold border-l-4 border-teal-700"
+                >
+                    Mis citas
+                </a>
+                <a
+                    href="/agendar/especialidad"
+                    class="p-4 text-slate-600 hover:bg-slate-50"
+                >
+                    Agendar nueva
+                </a>
+                <a href="#" class="p-4 text-slate-600 hover:bg-slate-50">
+                    Mi historial
+                </a>
+            </div>
+        </aside>
+
+        <main class="md:col-span-3">
+            <h1 class="text-2xl font-bold text-slate-900 mb-6">
+                Bienvenida, Ana López
+            </h1>
+
+            <section class="mb-8">
+                <div class="bg-teal-700 text-white p-6 rounded-xl shadow-sm inline-block min-w-[250px]">
+                    <h2 class="text-sm font-medium opacity-80 uppercase tracking-wide">
+                        Próxima cita
+                    </h2>
+                    <p class="text-2xl font-bold mt-1">Mié 7 Oct, 10:00 AM</p>
+                </div>
+            </section>
+
+            <section class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-slate-900">
+                        Citas programadas
+                    </h2>
+                </div>
+                <article class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 border-l-4 border-l-green-500 flex justify-between items-center">
+                    <div class="flex items-center gap-6">
+                        <div class="text-center">
+                            <span class="block text-2xl font-bold text-slate-900">
+                                07
+                            </span>
+                            <span class="text-xs font-bold text-slate-500">
+                                OCT
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900">
+                                Dr. Andrés Fuentes - Medicina General
+                            </h3>
+                            <span class="inline-block mt-1 bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs font-bold">
+                                Confirmada
+                            </span>
+                        </div>
+                    </div>
+                    <button class="text-red-600 hover:bg-red-50 px-3 py-1.5 rounded-lg text-sm font-medium transition">
+                        Cancelar
+                    </button>
+                </article>
+            </section>
+        </main>
+    </div>
+</Layout>

@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacto - Clínica Comunitaria">
+    <h1 class="text-3xl font-bold text-slate-900 mb-8">
+        Contacto y preguntas frecuentes
+    </h1>
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center flex flex-col items-center justify-center">
+            <span class="text-2xl mb-2">📞</span>
+            <h2 class="font-bold text-slate-900 text-sm">Teléfono</h2>
+            <p class="text-slate-500 font-medium">(33) 0000 0000</p>
+        </article>
+        <article class="bg-white p-6 rounded-xl shadow-sm border border-teal-700 text-center flex flex-col items-center justify-center bg-teal-50/30">
+            <span class="text-2xl mb-2">💬</span>
+            <h2 class="font-bold text-slate-900 text-sm">Chat en línea</h2>
+            <p class="text-teal-700 font-bold">Atención inmediata</p>
+        </article>
+    </section>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        <form class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 h-fit">
+            <h2 class="text-xl font-bold text-slate-900 mb-6">
+                Enviar mensaje
+            </h2>
+            <div class="space-y-4">
+                <input
+                    type="text"
+                    placeholder="Nombre completo *"
+                    class="w-full border-slate-200 rounded-md focus:ring-teal-700 focus:border-teal-700"
+                />
+                <input
+                    type="email"
+                    placeholder="Correo electrónico *"
+                    class="w-full border-slate-200 rounded-md focus:ring-teal-700 focus:border-teal-700"
+                />
+                <textarea
+                    rows="5"
+                    placeholder="Escribe tu consulta aquí... *"
+                    class="w-full border-slate-200 rounded-md focus:ring-teal-700 focus:border-teal-700"
+                ></textarea>
+                <button class="bg-teal-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-800 transition w-full sm:w-auto">
+                    Enviar mensaje >
+                </button>
+            </div>
+        </form>
+
+        <aside class="space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <h2 class="text-xl font-bold text-slate-900 mb-4">
+                    Preguntas frecuentes
+                </h2>
+                <div class="flex gap-2 mb-6 overflow-x-auto pb-2">
+                    <span class="bg-slate-900 text-white px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap">
+                        Todas
+                    </span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap cursor-pointer hover:bg-slate-200">
+                        Citas
+                    </span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap cursor-pointer hover:bg-slate-200">
+                        Pagos
+                    </span>
+                </div>
+
+                <div class="space-y-4">
+                    <details class="group border-b border-slate-100 pb-4">
+                        <summary class="font-bold text-slate-900 cursor-pointer list-none flex justify-between items-center">
+                            ¿Cómo agendo una cita médica?
+                            <span class="text-teal-700 group-open:rotate-45 transition-transform text-xl">
+                                +
+                            </span>
+                        </summary>
+                        <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                            Ingresa a "Agendar", elige especialidad, médico,
+                            fecha y hora. Finalmente, confirma tu cita y
+                            recibirás un correo con los detalles.
+                        </p>
+                    </details>
+                    <details class="group border-b border-slate-100 pb-4">
+                        <summary class="font-bold text-slate-900 cursor-pointer list-none flex justify-between items-center">
+                            ¿Con cuánta anticipación puedo cancelar?
+                            <span class="text-teal-700 group-open:rotate-45 transition-transform text-xl">
+                                +
+                            </span>
+                        </summary>
+                        <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                            Puedes cancelar o reagendar tu cita sin costo hasta
+                            24 horas antes del horario programado desde tu panel
+                            de paciente.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Simulador de Mapa -->
+            <div class="bg-slate-200 rounded-xl h-48 flex items-center justify-center overflow-hidden border border-slate-300 relative">
+                <div
+                    class="absolute inset-0 opacity-20"
+                    style="background-image: repeating-linear-gradient(45deg, #cbd5e1 25%, transparent 25%, transparent 75%, #cbd5e1 75%, #cbd5e1), repeating-linear-gradient(45deg, #cbd5e1 25%, transparent 25%, transparent 75%, #cbd5e1 75%, #cbd5e1); background-position: 0 0, 10px 10px; background-size: 20px 20px;"
+                ></div>
+                <div class="bg-white/90 p-3 rounded-lg shadow-sm z-10 text-center">
+                    <span class="text-xl">📍</span>
+                    <p class="font-bold text-slate-900 text-sm mt-1">
+                        Mapa de Ubicación
+                    </p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</Layout>

@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Registro - Clínica Comunitaria">
+    <h1 class="text-3xl font-bold text-slate-900 mb-6">Registro de paciente</h1>
+
+    <div class="grid md:grid-cols-4 gap-6">
+        <aside class="md:col-span-1">
+            <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col">
+                <a
+                    href="#"
+                    class="p-4 bg-teal-50 text-teal-800 font-bold border-l-4 border-teal-700"
+                >
+                    1. Datos personales
+                </a>
+                <a href="#" class="p-4 text-slate-600 hover:bg-slate-50">
+                    2. Datos de contacto
+                </a>
+                <a href="#" class="p-4 text-slate-600 hover:bg-slate-50">
+                    3. Datos de salud
+                </a>
+            </div>
+        </aside>
+
+        <form class="md:col-span-2 space-y-6">
+            <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b">
+                    1. Datos personales
+                </h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-sm font-bold text-slate-700 mb-1">
+                            Nombre(s) *
+                        </label>
+                        <input
+                            type="text"
+                            class="w-full border-slate-200 rounded-md focus:ring-teal-700 focus:border-teal-700"
+                        />
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-sm font-bold text-slate-700 mb-1">
+                            Apellidos *
+                        </label>
+                        <input
+                            type="text"
+                            class="w-full border-slate-200 rounded-md focus:ring-teal-700 focus:border-teal-700"
+                        />
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-sm font-bold text-slate-700 mb-1">
+                            CURP *
+                        </label>
+                        <input
+                            type="text"
+                            class="w-full border-slate-200 rounded-md focus:ring-teal-700 focus:border-teal-700"
+                        />
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label class="flex items-center gap-2 text-sm text-slate-600">
+                        <input
+                            type="checkbox"
+                            checked
+                            class="rounded text-teal-700 focus:ring-teal-700"
+                        />
+                        Acepto los Términos y Condiciones
+                    </label>
+                </div>
+                <div class="flex justify-end gap-3 mt-6 pt-4 border-t border-slate-100">
+                    <button
+                        type="button"
+                        class="px-4 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-lg transition"
+                    >
+                        Cancelar
+                    </button>
+                    <a
+                        href="/paciente/dashboard"
+                        class="px-6 py-2 bg-teal-700 text-white rounded-lg font-medium hover:bg-teal-800 transition"
+                    >
+                        Crear cuenta >
+                    </a>
+                </div>
+            </section>
+        </form>
+
+        <aside class="md:col-span-1">
+            <div class="bg-teal-50 p-6 rounded-xl shadow-sm border border-teal-100">
+                <h2 class="text-lg font-bold text-slate-900 mb-1">
+                    ¿Ya tienes cuenta?
+                </h2>
+                <p class="text-sm text-slate-600 mb-4">Inicia sesión</p>
+                <input
+                    type="email"
+                    placeholder="Correo"
+                    class="w-full border-slate-200 rounded-md mb-3 focus:ring-teal-700 focus:border-teal-700 text-sm"
+                />
+                <input
+                    type="password"
+                    placeholder="Contraseña"
+                    class="w-full border-slate-200 rounded-md mb-4 focus:ring-teal-700 focus:border-teal-700 text-sm"
+                />
+                <a
+                    href="/paciente/dashboard"
+                    class="block w-full text-center px-4 py-2 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition"
+                >
+                    Iniciar sesión
+                </a>
+            </div>
+        </aside>
+    </div>
+</Layout>

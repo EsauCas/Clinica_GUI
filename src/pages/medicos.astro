@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Directorio Médico">
+    <div class="mb-6">
+        <a href="/" class="text-teal-700 hover:underline text-sm font-medium">
+            &lt; Volver al inicio
+        </a>
+        <h1 class="text-3xl font-bold text-slate-900 mt-2">
+            Directorio médico y especialidades
+        </h1>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6">
+        <aside class="md:col-span-1 bg-white p-5 rounded-xl shadow-sm border border-slate-100 h-fit">
+            <h2 class="font-bold text-slate-900 mb-4 pb-2 border-b">Filtros</h2>
+            <div class="space-y-3 mb-6">
+                <strong class="text-sm text-slate-700">Especialidad</strong>
+                <label class="flex items-center gap-2 text-sm">
+                    <input
+                        type="checkbox"
+                        checked
+                        class="rounded text-teal-700 focus:ring-teal-700"
+                    />{" "}
+                    Todas
+                </label>
+                <label class="flex items-center gap-2 text-sm">
+                    <input
+                        type="checkbox"
+                        class="rounded text-teal-700 focus:ring-teal-700"
+                    />{" "}
+                    Medicina General
+                </label>
+            </div>
+            <button class="w-full border border-teal-700 text-teal-700 py-2 rounded-lg text-sm font-medium hover:bg-teal-50">
+                Limpiar
+            </button>
+        </aside>
+
+        <section class="md:col-span-3 space-y-4">
+            <div class="flex justify-between items-center">
+                <span class="text-sm text-slate-500">
+                    6 médicos encontrados
+                </span>
+                <select class="border-slate-200 rounded-md text-sm py-1 pl-3 pr-8 focus:ring-teal-700 focus:border-teal-700">
+                    <option>Ordenar: Disponibilidad</option>
+                </select>
+            </div>
+
+            <article class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="bg-slate-200 rounded-full w-16 h-16 shrink-0"></div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900">
+                            Dr. Andrés Fuentes R.
+                        </h3>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-xs font-medium">
+                                Medicina General
+                            </span>
+                            <span class="text-sm text-slate-500">
+                                ⭐ 4.9 (110)
+                            </span>
+                        </div>
+                        <p class="text-sm text-green-700 mt-2 font-medium">
+                            Próxima: Mañana 10:00
+                        </p>
+                    </div>
+                </div>
+                <a
+                    href="/agendar/especialidad"
+                    class="bg-teal-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-teal-800 shrink-0 w-full sm:w-auto text-center"
+                >
+                    Agendar
+                </a>
+            </article>
+        </section>
+    </div>
+</Layout>
